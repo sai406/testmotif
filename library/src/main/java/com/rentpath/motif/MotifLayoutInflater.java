@@ -231,7 +231,7 @@ public class MotifLayoutInflater extends LayoutInflater implements MotifActivity
         // We also maintain the Field reference and make it accessible which will make a pretty
         // significant difference to performance on Android 4.0+.
 
-        if (view == null && name.indexOf('.') > -1) {
+   /*     if (view == null && name.indexOf('.') > -1) {
             if (mConstructorArgs == null)
                 mConstructorArgs = ReflectionUtils.getField(LayoutInflater.class, "mConstructorArgs");
 
@@ -249,7 +249,7 @@ public class MotifLayoutInflater extends LayoutInflater implements MotifActivity
                 mConstructorArgsArr[0] = lastContext;
                 ReflectionUtils.setValue(mConstructorArgs, this, mConstructorArgsArr);
             }
-        }
+        }*/
         return view;
     }
 
