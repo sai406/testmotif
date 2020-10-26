@@ -240,7 +240,7 @@ public class MotifLayoutInflater extends LayoutInflater implements MotifActivity
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
-            } else if (mConstructorArgs == null)
+            } else {
                 mConstructorArgs = ReflectionUtils.getField(LayoutInflater.class, "mConstructorArgs");
 
                 final Object[] mConstructorArgsArr = (Object[]) ReflectionUtils.getValue(mConstructorArgs, this);
@@ -258,6 +258,7 @@ public class MotifLayoutInflater extends LayoutInflater implements MotifActivity
                     ReflectionUtils.setValue(mConstructorArgs, this, mConstructorArgsArr);
                 }
             }
+        }
         return view;
     }
 
